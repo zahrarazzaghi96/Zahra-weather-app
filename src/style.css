@@ -17,7 +17,7 @@ a{
     color: #885ef2;
    }
 
-   .city{
+.city{
     margin: 0;
     font-size: 38px;
     line-height: 48px;
@@ -31,16 +31,16 @@ a{
 .weather-details strong{
     color: #ee5684;
 }
-.weather-temperature{
+.weather-app-temperature{
     font-size: 88px;
     font-weight: bold;
     margin-left: 10px;
 }
-.weather-icon{
+.weather-app-icon{
     font-size: 44px;
     margin-top: 22px;
 }
-.weather-units{
+.weather-app-units{
     margin-top: 14px;
     font-size: 28px;
 }
