@@ -15,6 +15,7 @@ function refreshWeather(response) {
     windSpeedElement.innerHTML = `${response.data.wind.speed}km/h`;
     temperatureElement.innerHTML = Math.round(temperature);
     iconElement.innerHTML = `<img src="${response.data.condition.icon_url}" class="weather-app-icon" />`;
+    getForecast(response.data.city);
   }
   function formatDate(date) {
     let minutes = date.getMinutes();
@@ -45,7 +46,13 @@ function refreshWeather(response) {
     searchCity(searchInput.value);
   }
 
-  function displayForecast() {
+  function getForecast (city) {
+    let apiKey = "occ5995cba7146ce6c3fet3758a0a3ce";
+    let apiUrl =`https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=metric`;
+    axios(apiUrl).then(displayForecast);
+  } 
+  function displayForecast(response) {
+    console.log(response.data)
     let days = ["Tue", "Wed", "Thu", "Fri", "Sat"];
     let forecastHtml = "";
     days.forEach(function (day) {
@@ -72,4 +79,4 @@ function refreshWeather(response) {
   searchFormElement.addEventListener("submit", handleSearchSubmit);
   searchCity("Zarqan");
 
-  displayForecast();
+  getForecast("Zarqan");
