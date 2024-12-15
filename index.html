@@ -12,21 +12,27 @@
 <body>
     <div class="weather-app">
     <header>
-        <form>
-          <input type="search" placeholder="Enter a city.." required />
-          <input type="submit" value="Search" />
+        <form class="search-form">
+            <input type="search" placeholder="Enter a city..." required class="search-form-input">
+            <input type="submit" value="search" class="search-form-button">
         </form>
       </header>
       <main>
-        <div>
-          <h1>Zarqan</h1>
-          <p>
+        <div class=weather-app-data>
+            <div>
+          <h1 class="city">Zarqan</h1>
+          <p class="weather-details">
             Friday 16:15, clear
             <br />
-            Humidity: 30%, Wind: 16.9km/h
+            Humidity: <strong>55%</strong>, Wind: <strong>3.49km/h</strong>
           </p>
         </div>
-        <div>☁️ 11°C</div>
+        <div class="weather-info-container">
+         <div class="weather-icon">☁️</div>
+         <div class="weather-temperature">11</div>
+         <div class="weather-units">°C</div>
+        </div>
+      </div>
       </main>
     <footer>
         Coded by <a href="https://github.com/zahrarazzaghi96" target="_blank"> Zahra Razzaghi </a>
